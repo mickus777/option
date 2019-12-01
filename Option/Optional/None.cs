@@ -10,11 +10,23 @@ namespace CodingHelmet.Optional
         public override Option<TResult> MapOptional<TResult>(Func<T, Option<TResult>> map) =>
             None.Value;
 
+        public override T Reduce()
+        {
+            throw new Exception("None has can not be reduced!");
+        }
+
         public override T Reduce(T whenNone) =>
             whenNone;
 
         public override T Reduce(Func<T> whenNone) =>
             whenNone();
+
+        public override bool CanReduce()
+        {
+            return false;
+        }
+
+        
 
         public override bool Equals(object obj) =>
             !(obj is null) && ((obj is None<T>) || (obj is None));

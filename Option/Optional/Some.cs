@@ -24,11 +24,19 @@ namespace CodingHelmet.Optional
         public override Option<TResult> MapOptional<TResult>(Func<T, Option<TResult>> map) =>
             map(this.Content);
 
+        public override T Reduce() => 
+            this.Content;
+
         public override T Reduce(T whenNone) =>
             this.Content;
 
         public override T Reduce(Func<T> whenNone) =>
             this.Content;
+
+        public override bool CanReduce()
+        {
+            return true;
+        }
 
         public override string ToString() =>
             $"Some({this.ContentToString})";

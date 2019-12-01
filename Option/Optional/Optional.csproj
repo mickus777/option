@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CodingHelmet.Optional</RootNamespace>
-    <AssemblyName>CodingHelmet.Optional</AssemblyName>
+    <AssemblyName>MBK.Dependencies.Optional</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
